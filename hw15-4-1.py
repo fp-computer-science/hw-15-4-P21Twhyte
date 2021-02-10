@@ -1,11 +1,11 @@
 # Tow 2/9/2021
 
 def add_fruit(inventory, fruit, quantity=0):
-    inventory[fruit] = 10
-    if quantity == 10:
-        inventory[fruit] = 0
-    inventory[fruit] += quantity
-    return
+    if fruit not in inventory:
+        inventory[fruit] = quantity
+    else:
+        inventory[fruit] += quantity
+    return inventory    
 
 
 new_inventory = {}
